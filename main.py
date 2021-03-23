@@ -5,14 +5,31 @@ from PIL import ImageDraw
 from PIL import ImageFont
 import io
 
-st.title('Face App')
+st.title('年齢判別App')
+
+st.write('Display Image')
+
+img = Image.open('image.jpg')
+st.image(img, caption='title' , use_column_width=True)
+
+
+
+
+"""
+
+##  あなたの写真から、年齢と性別を判別します
+###  写真をアップデート
+###  ※Jpeg file　を選択してください
+
+"""
+
 
 subscription_key = '0de3e5b25b4642c699b437b6917e41a6'
 assert subscription_key
 
 face_api_url = 'https://20210301hayatoapp.cognitiveservices.azure.com/face/v1.0/detect'
 
-
+maxUploadSize = 1028
 
 uploaded_file = st.file_uploader("Choose an image",type='jpeg')
 if uploaded_file is not None:
