@@ -54,7 +54,7 @@ if uploaded_file is not None:
     for result in results:
         rect = result['faceRectangle']
         size = int(rect['width']/3)
-        fnt = ImageFont.truetype("/Library/Fonts/Arial Unicode.ttf",size)
+        fnt = ImageFont.truetype('arial.ttf', size=size)
         gender = result['faceAttributes']['gender']
         age = result['faceAttributes']['age']
         intext = gender + ',' + str(int(age))
