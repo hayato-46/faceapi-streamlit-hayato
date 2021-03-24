@@ -10,16 +10,20 @@ st.title('年齢判別App')
 st.write('Display Image')
 
 imgs = Image.open('image.jpg')
-st.image(imgs, caption='title' , use_column_width=True)
+st.image(imgs, use_column_width=True)
 
 
 
 
 """
+##  機能
+写真から顔を判別し、年齢・性別を判定します。
+- 男性 male
+- 女性 female
 
-##  あなたの写真から、年齢と性別を判別します
-###  写真をアップデート
-###  ※Jpeg file　を選択してください
+###  注意事項
+- 人間のみ判別できます。
+- 角度により判別できない可能性があります。
 
 """
 
