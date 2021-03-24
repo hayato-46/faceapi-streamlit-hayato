@@ -9,8 +9,8 @@ st.title('年齢判別App')
 
 st.write('Display Image')
 
-img = Image.open('image.jpg')
-st.image(img, caption='title' , use_column_width=True)
+imgs = Image.open('image.jpg')
+st.image(imgs, caption='title' , use_column_width=True)
 
 
 
@@ -29,9 +29,7 @@ assert subscription_key
 
 face_api_url = 'https://20210301hayatoapp.cognitiveservices.azure.com/face/v1.0/detect'
 
-maxUploadSize = 1028
-
-uploaded_file = st.file_uploader("Choose an image",type='jpeg')
+uploaded_file = st.file_uploader("Choose an image")
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
     with io.BytesIO() as output:
